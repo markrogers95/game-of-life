@@ -36,6 +36,8 @@ protected:
 
 		this_thread::sleep_for(10ms);
 
+		if (!GetKey(olc::Key::LEFT).bHeld) return true;
+
 		auto square = [&](int x, int y) {
 			return screen_state[y * ScreenWidth() + x];
 		};
